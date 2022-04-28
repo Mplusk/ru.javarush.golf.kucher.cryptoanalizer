@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.Button?>
+        <?import javafx.scene.control.Label?>
+        <?import javafx.scene.control.TextArea?>
+        <?import javafx.scene.control.TextField?>
+        <?import javafx.scene.effect.Blend?>
+        <?import javafx.scene.layout.AnchorPane?>
+        <?import javafx.scene.shape.Line?>
+        <?import javafx.scene.text.Font?>
+        <?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.javarush.cryptoanalizer.MainConstructor">
+    <Button fx:id="bforce" layoutX="192.0" layoutY="256.0" mnemonicParsing="false" onAction="#bforce3" prefHeight="25.0" prefWidth="191.0" text="Выберите закодированый файл" />
+    <Button fx:id="encode1" layoutX="183.0" layoutY="74.0" mnemonicParsing="false" onAction="#encode1in" text="Выберите файл для шифрования" />
+    <Button fx:id="decode2" layoutX="187.0" layoutY="164.0" mnemonicParsing="false" onAction="#decode2in" text="Выберите закодированый файл" />
+    <Label layoutX="188.0" layoutY="51.0" text="2.Зашифровать:" />
+    <Label layoutX="76.0" layoutY="260.0" text="Выберите файл для:" />
+    <Label layoutX="187.0" layoutY="140.0" text="2.Расшифровка:" />
+    <TextArea fx:id="checOpenFile" layoutX="93.0" layoutY="426.0" prefHeight="60.0" prefWidth="500.0" />
+    <Button fx:id="save2" layoutX="414.0" layoutY="164.0" mnemonicParsing="false" onAction="#save2decode" text="Сохранить результат" />
+    <TextField fx:id="key2" layoutX="76.0" layoutY="164.0" onKeyTyped="#key2num" prefHeight="25.0" prefWidth="36.0" />
+    <Text layoutX="38.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.Задать ключ(цифра):" />
+    <Line endX="493.0" layoutX="106.0" layoutY="107.0" startX="-106.0" />
+    <Line endX="423.0" layoutX="179.0" layoutY="200.0" startX="-177.0" />
+    <Line endX="536.0" layoutX="64.0" layoutY="42.0" startX="-64.0" stroke="#e1d4d4" />
+    <Button fx:id="save1" layoutX="414.0" layoutY="74.0" mnemonicParsing="false" onAction="#save1encode" text="Сохранить результат" />
+    <Label layoutX="38.0" layoutY="51.0" text="1.Задать ключ(цифра):" />
+    <Label layoutX="414.0" layoutY="51.0" text="3.Закодированный вариант:" />
+    <TextField fx:id="key1" layoutX="76.0" layoutY="74.0" onKeyTyped="#key1num" prefHeight="25.0" prefWidth="36.0" />
+    <Label layoutX="35.0" layoutY="108.0" text="Расшифровать шифр Цезаря">
+        <font>
+            <Font size="19.0" />
+        </font>
+        <effect>
+            <Blend />
+        </effect>
+    </Label>
+    <Label layoutX="38.0" layoutY="14.0" text="Зашифровать шифром Цезаря">
+        <font>
+            <Font size="19.0" />
+        </font>
+        <effect>
+            <Blend />
+        </effect>
+    </Label>
+    <Line endX="451.5" layoutX="149.0" layoutY="136.0" startX="-148.5" stroke="#e1d4d4" />
+    <Label layoutX="33.0" layoutY="201.0" text="Криптоанализ методом brute force">
+        <font>
+            <Font size="19.0" />
+        </font>
+        <effect>
+            <Blend />
+        </effect>
+    </Label>
+    <Line endX="451.5" layoutX="148.0" layoutY="230.0" startX="-148.5" stroke="#e1d4d4" />
+    <Button fx:id="save3" layoutX="414.0" layoutY="256.0" mnemonicParsing="false" onAction="#save3bf" text="Сохранить результат" />
+    <Line endX="423.0" layoutX="176.0" layoutY="290.0" startX="-177.0" />
+    <Label layoutX="188.0" layoutY="230.0" text="1.Расшифровка:" />
+    <Label layoutX="35.0" layoutY="291.0" text="Криптоанализ методом статистического анализа">
+        <font>
+            <Font size="19.0" />
+        </font>
+        <effect>
+            <Blend />
+        </effect>
+    </Label>
+    <Label layoutX="19.0" layoutY="322.0" prefHeight="40.0" prefWidth="161.0" text="1.Выберите закодированый файл:" wrapText="true" />
+    <Button fx:id="decode4" layoutX="15.0" layoutY="369.0" mnemonicParsing="false" onAction="#decode4in" prefHeight="40.0" prefWidth="169.0" text="Выберете файл" textAlignment="CENTER" wrapText="true" />
+    <Button fx:id="save4" layoutX="426.0" layoutY="365.0" mnemonicParsing="false" onAction="#save4decode" prefHeight="40.0" prefWidth="131.0" text="Сохранить результат" />
+    <Button fx:id="stat" layoutX="211.0" layoutY="369.0" mnemonicParsing="false" onAction="#statin" prefHeight="40.0" prefWidth="183.0" text="Выберите файл" textAlignment="CENTER" wrapText="true" />
+    <Label layoutX="209.0" layoutY="322.0" prefHeight="47.0" prefWidth="183.0" text="2.Выберите файл с статистическим примером текста:" wrapText="true" />
+    <Label layoutX="414.0" layoutY="140.0" text="3.Расшифрованный вариант:" />
+    <Label layoutX="414.0" layoutY="230.0" text="3.Расшифрованный вариант:" />
+    <Label layoutX="422.0" layoutY="322.0" prefHeight="40.0" prefWidth="140.0" text="3.Расшифрованный вариант:" wrapText="true" />
+    <Label layoutX="19.0" layoutY="444.0" prefHeight="25.0" prefWidth="71.0" text="Результат:">
+        <font>
+            <Font size="15.0" />
+        </font>
+        <effect>
+            <Blend />
+        </effect>
+    </Label>
+    <Line endX="451.5" layoutX="154.0" layoutY="319.0" startX="-148.5" stroke="#e1d4d4" />
+    <Line endX="423.0" layoutX="176.0" layoutY="417.0" startX="-177.0" />
+</AnchorPane>
